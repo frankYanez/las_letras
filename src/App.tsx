@@ -43,7 +43,7 @@ function App() {
   // Mostrar pantalla de carga inicial
   if (isAuthLoading) {
     return (
-      <div className="min-h-screen bg-[hsl(220,15%,8%)] flex items-center justify-center">
+      <div className="min-h-screen bg-[hsl(var(--background))] flex items-center justify-center">
         <div className="text-center">
           <Loader2 className="w-10 h-10 text-[hsl(var(--gold))] animate-spin mx-auto mb-4" />
           <p className="text-[hsl(var(--ivory-dim))] text-sm">Cargando...</p>
@@ -68,7 +68,7 @@ function App() {
 
   // Landing page / main app layout
   return (
-    <div className="min-h-screen bg-[hsl(220,15%,8%)] scrollbar-elegant">
+    <div className="min-h-screen bg-[hsl(var(--background))] scrollbar-elegant">
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={
@@ -97,7 +97,7 @@ function App() {
         richColors
         toastOptions={{
           style: {
-            background: 'hsl(220, 15%, 8%)',
+            background: 'hsl(var(--background))',
             border: '1px solid hsl(var(--gold) / 0.2)',
             color: 'hsl(var(--ivory))'
           }

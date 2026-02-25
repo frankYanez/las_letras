@@ -164,7 +164,7 @@ const Publicaciones = () => {
       className="relative py-24 sm:py-32 lg:py-40 overflow-hidden"
     >
       {/* Fondo */}
-      <div className="absolute inset-0 bg-[hsl(220,15%,10%)]" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))]" />
 
       {/* Líneas decorativas */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/20 to-transparent" />
@@ -244,7 +244,7 @@ const Publicaciones = () => {
       </div>
 
       {/* Gradiente inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(220,15%,8%)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent" />
     </section>
   );
 };

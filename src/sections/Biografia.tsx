@@ -36,7 +36,7 @@ const Biografia = () => {
       className="relative py-24 sm:py-32 lg:py-40 overflow-hidden"
     >
       {/* Fondo sutil */}
-      <div className="absolute inset-0 bg-[hsl(220,15%,8%)]" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))]" />
 
       {/* Elementos decorativos */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/20 to-transparent" />
@@ -91,7 +91,7 @@ const Biografia = () => {
                 />
 
                 {/* Overlay gradiente */}
-                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,15%,8%)]/80 via-transparent to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))]/80 via-transparent to-transparent" />
               </div>
 
               {/* Elemento decorativo borde */}
@@ -157,7 +157,7 @@ const Biografia = () => {
       </div>
 
       {/* Gradiente inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(220,15%,10%)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent" />
     </section>
   );
 };

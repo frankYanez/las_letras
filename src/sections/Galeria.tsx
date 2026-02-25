@@ -30,7 +30,7 @@ const Galeria = () => {
     const duplicatedItems = [...galleryItems, ...galleryItems];
 
     return (
-        <section id="galeria" className="relative py-24 sm:py-32 overflow-hidden bg-[hsl(220,15%,8%)]">
+        <section id="galeria" className="relative py-24 sm:py-32 overflow-hidden bg-[hsl(var(--background))]">
             {/* Elementos decorativos de fondo */}
             <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/20 to-transparent" />
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-[hsl(var(--gold))]/5 via-transparent to-transparent opacity-50 pointer-events-none" />
@@ -82,8 +82,8 @@ const Galeria = () => {
             {/* Contenedor del Carousel Infinito */}
             <div className="relative w-full flex overflow-hidden group">
                 {/* Máscaras laterales para difuminar la entrada/salida (fade effect) */}
-                <div className="absolute top-0 left-0 w-16 md:w-40 h-full bg-gradient-to-r from-[hsl(220,15%,8%)] to-transparent z-20 pointer-events-none" />
-                <div className="absolute top-0 right-0 w-16 md:w-40 h-full bg-gradient-to-l from-[hsl(220,15%,8%)] to-transparent z-20 pointer-events-none" />
+                <div className="absolute top-0 left-0 w-16 md:w-40 h-full bg-gradient-to-r from-[hsl(var(--background))] to-transparent z-20 pointer-events-none" />
+                <div className="absolute top-0 right-0 w-16 md:w-40 h-full bg-gradient-to-l from-[hsl(var(--background))] to-transparent z-20 pointer-events-none" />
 
                 <motion.div
                     className="flex gap-6 px-3"
@@ -130,7 +130,7 @@ const Galeria = () => {
                             )}
 
                             {/* Overlay y título en hover */}
-                            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(220,15%,6%)]/90 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-500 flex items-end p-6">
+                            <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--background))]/90 via-transparent to-transparent opacity-0 group-hover/item:opacity-100 transition-opacity duration-500 flex items-end p-6">
                                 <p className="text-[hsl(var(--ivory))] font-serif text-lg transform translate-y-4 group-hover/item:translate-y-0 transition-transform duration-500">
                                     {item.alt}
                                 </p>

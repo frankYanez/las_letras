@@ -15,7 +15,7 @@ const Footer = ({ onLoginClick }: FooterProps) => {
   return (
     <footer className="relative py-16 sm:py-20 overflow-hidden">
       {/* Fondo */}
-      <div className="absolute inset-0 bg-[hsl(220,15%,6%)]" />
+      <div className="absolute inset-0 bg-[hsl(var(--background))]" />
 
       {/* Línea superior */}
       <div className="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))]/30 to-transparent" />

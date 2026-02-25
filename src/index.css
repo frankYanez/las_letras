@@ -6,45 +6,57 @@
 
 @layer base {
   :root {
-    /* Tema Oscuro Editorial - Las letras de MaJu */
-    --background: 120 15% 8%;
-    --foreground: 40 20% 94%;
-    --card: 220 15% 10%;
-    --card-foreground: 40 20% 94%;
-    --popover: 220 15% 10%;
-    --popover-foreground: 40 20% 94%;
-    --primary: 35 50% 55%;
-    --primary-foreground: 220 15% 8%;
-    --secondary: 220 12% 16%;
-    --secondary-foreground: 40 20% 94%;
-    --muted: 220 12% 16%;
-    --muted-foreground: 40 10% 65%;
-    --accent: 280 25% 45%;
-    --accent-foreground: 40 20% 94%;
-    --destructive: 0 62.8% 50%;
-    --destructive-foreground: 40 20% 94%;
-    --border: 220 12% 20%;
-    --input: 220 12% 20%;
-    --ring: 35 50% 55%;
-    --radius: 0.625rem;
-    --sidebar-background: 220 15% 6%;
-    --sidebar-foreground: 40 20% 94%;
-    --sidebar-primary: 35 50% 55%;
-    --sidebar-primary-foreground: 220 15% 8%;
-    --sidebar-accent: 220 12% 16%;
-    --sidebar-accent-foreground: 40 20% 94%;
-    --sidebar-border: 220 12% 20%;
-    --sidebar-ring: 35 50% 55%;
+    /* Tema Claro Princess - Las letras de MaJu */
+    --background: 340 30% 98%;
+    /* Rosa/Blanco muy suave */
+    --foreground: 340 30% 20%;
+    /* Gris oscuro con tinte rosa */
+    --card: 0 0% 100%;
+    --card-foreground: 340 30% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 30% 20%;
+    --primary: 330 70% 75%;
+    /* Rosa princesa */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 20% 95%;
+    --secondary-foreground: 340 30% 20%;
+    --muted: 340 20% 95%;
+    --muted-foreground: 340 10% 45%;
+    --accent: 320 60% 85%;
+    /* Lila rozado muy suave */
+    --accent-foreground: 340 30% 20%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 340 20% 90%;
+    --input: 340 20% 90%;
+    --ring: 330 70% 75%;
+    --radius: 1rem;
+    --sidebar-background: 340 30% 98%;
+    --sidebar-foreground: 340 30% 20%;
+    --sidebar-primary: 330 70% 75%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 340 20% 95%;
+    --sidebar-accent-foreground: 340 30% 20%;
+    --sidebar-border: 340 20% 90%;
+    --sidebar-ring: 330 70% 75%;
 
     /* Colores personalizados del tema */
-    --gold: 35 50% 55%;
-    --gold-light: 35 50% 65%;
-    --graphite: 220 15% 8%;
-    --graphite-light: 220 15% 12%;
-    --ivory: 40 20% 94%;
-    --ivory-dim: 40 10% 75%;
-    --terracotta: 15 45% 50%;
-    --violet: 280 25% 45%;
+    --gold: 330 70% 65%;
+    /* Reemplazado por Rosa Princesa Vibrante */
+    --gold-light: 330 80% 80%;
+    /* Rosa claro */
+    --graphite: 340 40% 96%;
+    /* Fondo principal */
+    --graphite-light: 0 0% 100%;
+    /* Cartas blancas */
+    --ivory: 340 30% 30%;
+    /* Texto principal oscuro */
+    --ivory-dim: 340 20% 45%;
+    /* Texto secundario oscuro */
+    --terracotta: 340 90% 70%;
+    /* Fucsia / Rosa encendido */
+    --violet: 310 50% 75%;
+    /* Lila suave */
   }
 }
 

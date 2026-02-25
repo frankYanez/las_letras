@@ -137,7 +137,7 @@ const AdminDashboard = ({
   };
 
   return (
-    <div className="min-h-screen bg-[hsl(220,15%,6%)]">
+    <div className="min-h-screen bg-[hsl(var(--background))]">
       {/* Header */}
       <header className="sticky top-0 z-40 glass-strong border-b border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

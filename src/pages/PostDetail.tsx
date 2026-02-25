@@ -20,7 +20,7 @@ const PostDetail = () => {
 
     if (!post) {
         return (
-            <div className="min-h-screen bg-[hsl(220,15%,8%)] flex flex-col items-center justify-center p-4 relative overflow-hidden">
+            <div className="min-h-screen bg-[hsl(var(--background))] flex flex-col items-center justify-center p-4 relative overflow-hidden">
                 <div className="absolute inset-0 bg-gradient-to-br from-[hsl(var(--gold))]/10 to-transparent" />
                 <h2 className="text-4xl text-[hsl(var(--gold))] font-serif mb-6 relative z-10">Escrito no encontrado</h2>
                 <p className="text-[hsl(var(--ivory-dim))] text-lg mb-10 relative z-10">El fragmento que buscas se ha perdido entre las páginas...</p>
@@ -45,9 +45,9 @@ const PostDetail = () => {
     };
 
     return (
-        <div className="min-h-screen bg-[hsl(220,15%,8%)] text-[hsl(var(--ivory))] selection:bg-[hsl(var(--gold))]/30">
+        <div className="min-h-screen bg-[hsl(var(--background))] text-[hsl(var(--ivory))] selection:bg-[hsl(var(--gold))]/30">
             {/* Barra superior */}
-            <nav className="fixed top-0 w-full z-50 glass border-b border-[hsl(var(--gold))]/10 bg-[hsl(220,15%,6%)]/80 backdrop-blur-md">
+            <nav className="fixed top-0 w-full z-50 glass border-b border-[hsl(var(--gold))]/10 bg-[hsl(var(--background))]/80 backdrop-blur-md">
                 <div className="max-w-5xl mx-auto px-4 sm:px-6 h-20 flex items-center justify-between">
                     <button
                         onClick={() => navigate('/')}
@@ -64,7 +64,7 @@ const PostDetail = () => {
             <header className="relative w-full min-h-[70vh] flex flex-col items-center justify-center pt-20 overflow-hidden">
                 {/* Imagen de fondo abstracta / literaria */}
                 <div className="absolute inset-0 z-0">
-                    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,15%,8%)]/60 via-[hsl(220,15%,8%)]/80 to-[hsl(220,15%,8%)] opacity-90 z-10" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))]/60 via-[hsl(var(--background))]/80 to-[hsl(var(--background))] opacity-90 z-10" />
                     <img
                         src="https://images.unsplash.com/photo-1455390582262-044cdead2708?q=80&w=2940&auto=format&fit=crop"
                         alt="Background"
@@ -117,7 +117,7 @@ const PostDetail = () => {
                 </div>
 
                 {/* Elemento que conecta el header con el contenido */}
-                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(220,15%,8%)] to-transparent z-10" />
+                <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent z-10" />
             </header>
 
             <main className="px-4 sm:px-6 relative z-20 -mt-10 pb-24">

@@ -3,7 +3,7 @@ import { Feather, BookOpen, Heart } from 'lucide-react';
 
 const Hero = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[hsl(220,15%,6%)]">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-[hsl(var(--background))]">
       {/* Video de fondo con efecto super difuminado hacia las orillas / fondo */}
       <video
         autoPlay
@@ -23,7 +23,7 @@ const Hero = () => {
       </video>
 
       {/* Overlay Oscuro / Gradiente para legibilidad */}
-      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(220,15%,6%)]/40 via-[hsl(220,15%,8%)]/60 to-[hsl(220,15%,10%)]/90" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[hsl(var(--background))]/40 via-[hsl(var(--background))]/60 to-[hsl(var(--background))]/90" />
 
 
       {/* Elementos decorativos flotantes */}
@@ -131,7 +131,7 @@ const Hero = () => {
       </div>
 
       {/* Gradiente inferior */}
-      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(220,15%,8%)] to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[hsl(var(--background))] to-transparent" />
     </section>
   );
 };
