@@ -1,0 +1,130 @@
+/* Estilos específicos para Las letras de MaJu */
+
+/* Asegurar que el modo oscuro esté siempre activo */
+.dark {
+  color-scheme: dark;
+}
+
+/* Transiciones suaves */
+* {
+  transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* Selección de texto con color dorado */
+::selection {
+  background-color: hsl(35 50% 55% / 0.3);
+  color: hsl(40 20% 94%);
+}
+
+/* Focus visible para accesibilidad */
+*:focus-visible {
+  outline: 2px solid hsl(35 50% 55%);
+  outline-offset: 2px;
+}
+
+/* Estilos para el scrollbar global */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(220 15% 6%);
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(35 50% 55% / 0.2);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(35 50% 55% / 0.4);
+}
+
+/* Animación de entrada para elementos */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Efecto de brillo para textos */
+.text-glow {
+  text-shadow: 0 0 40px hsl(35 50% 55% / 0.3);
+}
+
+/* Línea divisoria elegante */
+.divider-elegant {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    hsl(35 50% 55% / 0.3) 50%,
+    transparent 100%
+  );
+}
+
+/* Efecto de vidrio mejorado */
+.glass-card {
+  background: linear-gradient(
+    135deg,
+    hsl(0 0% 100% / 0.05) 0%,
+    hsl(0 0% 100% / 0.02) 100%
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid hsl(0 0% 100% / 0.1);
+}
+
+/* Hover suave para tarjetas */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.4);
+}
+
+/* Estilos para inputs en modo oscuro */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus {
+  -webkit-text-fill-color: hsl(40 20% 94%);
+  -webkit-box-shadow: 0 0 0px 1000px hsl(220 15% 10%) inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Responsive typography */
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+/* Reducir animaciones para usuarios que lo prefieren */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
