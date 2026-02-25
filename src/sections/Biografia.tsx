@@ -81,7 +81,7 @@ const Biografia = () => {
                 </div>
 
                 <img
-                  src="@/assets/IMG_0525.png"
+                  src="/assets/IMG_0525.png"
                   alt="MaJu"
                   className="absolute inset-0 w-full h-full object-contain opacity-90 transition-transform duration-700 group-hover:scale-105"
                   onError={(e) => {

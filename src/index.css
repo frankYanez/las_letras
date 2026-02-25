@@ -7,7 +7,7 @@
 @layer base {
   :root {
     /* Tema Oscuro Editorial - Las letras de MaJu */
-    --background: 220 15% 8%;
+    --background: 120 15% 8%;
     --foreground: 40 20% 94%;
     --card: 220 15% 10%;
     --card-foreground: 40 20% 94%;
@@ -35,7 +35,7 @@
     --sidebar-accent-foreground: 40 20% 94%;
     --sidebar-border: 220 12% 20%;
     --sidebar-ring: 35 50% 55%;
-    
+
     /* Colores personalizados del tema */
     --gold: 35 50% 55%;
     --gold-light: 35 50% 65%;
@@ -52,41 +52,47 @@
   * {
     @apply border-border;
   }
-  
+
   html {
     scroll-behavior: smooth;
   }
-  
+
   body {
     @apply bg-background text-foreground antialiased;
     font-family: 'Inter', system-ui, sans-serif;
   }
-  
-  h1, h2, h3, h4, h5, h6 {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Playfair Display', Georgia, serif;
     font-weight: 500;
   }
 }
 
 @layer utilities {
+
   /* Efecto glassmorphism */
   .glass {
     @apply bg-white/5 backdrop-blur-xl border border-white/10;
   }
-  
+
   .glass-strong {
     @apply bg-white/10 backdrop-blur-2xl border border-white/15;
   }
-  
+
   /* Gradientes elegantes */
   .gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
   }
-  
+
   .gradient-dark {
     background: linear-gradient(180deg, hsl(var(--graphite)) 0%, hsl(var(--graphite-light)) 100%);
   }
-  
+
   /* Texto con gradiente */
   .text-gradient-gold {
     background: linear-gradient(135deg, hsl(var(--gold)) 0%, hsl(var(--gold-light)) 100%);
@@ -94,45 +100,45 @@
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
-  
+
   /* Sombra suave */
   .shadow-glow {
     box-shadow: 0 0 40px -10px hsl(var(--gold) / 0.3);
   }
-  
+
   .shadow-glow-strong {
     box-shadow: 0 0 60px -10px hsl(var(--gold) / 0.4);
   }
-  
+
   /* Línea decorativa */
   .decorative-line {
     @apply w-24 h-px bg-gradient-to-r from-transparent via-[hsl(var(--gold))] to-transparent;
   }
-  
+
   /* Hover efectos */
   .hover-lift {
     @apply transition-all duration-300 ease-out;
   }
-  
+
   .hover-lift:hover {
     @apply -translate-y-1;
     box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
   }
-  
+
   /* Scrollbar personalizada */
   .scrollbar-elegant::-webkit-scrollbar {
     width: 6px;
   }
-  
+
   .scrollbar-elegant::-webkit-scrollbar-track {
     background: hsl(var(--graphite));
   }
-  
+
   .scrollbar-elegant::-webkit-scrollbar-thumb {
     background: hsl(var(--gold) / 0.3);
     border-radius: 3px;
   }
-  
+
   .scrollbar-elegant::-webkit-scrollbar-thumb:hover {
     background: hsl(var(--gold) / 0.5);
   }
@@ -140,9 +146,12 @@
 
 /* Animaciones personalizadas */
 @keyframes float {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
@@ -152,6 +161,7 @@
   0% {
     background-position: -200% 0;
   }
+
   100% {
     background-position: 200% 0;
   }
@@ -162,6 +172,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -169,9 +180,12 @@
 }
 
 @keyframes pulse-glow {
-  0%, 100% {
+
+  0%,
+  100% {
     box-shadow: 0 0 20px -5px hsl(var(--gold) / 0.3);
   }
+
   50% {
     box-shadow: 0 0 40px -5px hsl(var(--gold) / 0.5);
   }
@@ -182,7 +196,7 @@
 }
 
 .animate-shimmer {
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.05), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.05), transparent);
   background-size: 200% 100%;
   animation: shimmer 3s infinite;
 }
