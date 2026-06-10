@@ -5,9 +5,11 @@ import { Toaster } from 'sonner';
 import Hero from '@/sections/Hero';
 import Biografia from '@/sections/Biografia';
 import Publicaciones from '@/sections/Publicaciones';
+import Frases from '@/sections/Frases';
 import Galeria from '@/sections/Galeria';
 import Footer from '@/sections/Footer';
 import LoginModal from '@/components/LoginModal';
+import CustomCursor from '@/components/CustomCursor';
 import AdminDashboard from '@/pages/AdminDashboard';
 import PostDetail from '@/pages/PostDetail';
 import { useAuth } from '@/hooks/useAuth';
@@ -21,9 +23,8 @@ function App() {
   const { isLoading: isAuthLoading, isAuthenticated, signIn, signOut } = useAuth();
   const { posts, isLoading: isPostsLoading, addPost, editPost, removePost } = usePosts();
 
-  // Forzar modo oscuro
   useEffect(() => {
-    document.documentElement.classList.add('dark');
+    document.documentElement.classList.remove('dark');
   }, []);
 
   const handleLogin = async (email: string, password: string) => {
@@ -68,7 +69,15 @@ function App() {
 
   // Landing page / main app layout
   return (
-    <div className="min-h-screen bg-[hsl(var(--background))] scrollbar-elegant">
+    <div className="min-h-screen scrollbar-elegant">
+      <CustomCursor />
+      {/* Noise texture overlay */}
+      <div aria-hidden style={{
+        position: 'fixed', inset: 0, pointerEvents: 'none', zIndex: 1,
+        backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)'/%3E%3C/svg%3E")`,
+        backgroundSize: '200px 200px',
+        opacity: 0.038,
+      }} />
       <AnimatePresence mode="wait">
         <Routes>
           <Route path="/" element={
@@ -76,6 +85,7 @@ function App() {
               <Hero />
               <Biografia />
               <Publicaciones />
+              <Frases />
               <Galeria />
               <Footer onLoginClick={() => setIsLoginModalOpen(true)} />
             </main>
@@ -92,13 +102,13 @@ function App() {
       />
 
       <Toaster
-        theme="dark"
+        theme="light"
         position="top-center"
         richColors
         toastOptions={{
           style: {
-            background: 'hsl(var(--background))',
-            border: '1px solid hsl(var(--gold) / 0.2)',
+            background: 'rgba(255,255,255,0.9)',
+            border: '1px solid rgba(155,35,85,0.2)',
             color: 'hsl(var(--ivory))'
           }
         }}

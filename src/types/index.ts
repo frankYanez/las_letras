@@ -6,6 +6,7 @@ export interface Post {
   fecha_publicacion: string;
   contenido: string;
   extracto: string;
+  url?: string;
   created_at?: string;
   updated_at?: string;
 }

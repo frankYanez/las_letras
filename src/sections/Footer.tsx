@@ -30,10 +30,10 @@ const Footer = ({ onLoginClick }: FooterProps) => {
             transition={{ duration: 0.6 }}
             className="text-center mb-8"
           >
-            <h3 className="text-2xl sm:text-3xl font-serif text-[hsl(var(--ivory))] mb-2">
-              Las letras de <span className="text-gradient-gold">MaJu</span>
+            <h3 className="mb-2" style={{ fontFamily: "'Dancing Script', cursive", fontSize: 'clamp(24px,4vw,32px)', fontWeight: 700, color: 'hsl(var(--color-primary))' }}>
+              Las Letras de <span className="text-gradient-gold">MaJu</span>
             </h3>
-            <p className="text-[hsl(var(--ivory-dim))] text-sm italic">
+            <p className="text-sm italic" style={{ color: 'hsl(var(--color-text-soft))' }}>
               Donde las palabras encuentran su hogar
             </p>
           </motion.div>
