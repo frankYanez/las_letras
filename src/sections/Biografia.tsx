@@ -63,18 +63,15 @@ const Biografia = () => {
                   background: 'rgba(255,255,255,0.2)',
                 }}
               >
-                <iframe
-                  src="https://www.instagram.com/p/DGmr1J0sB-w/embed/?cr=1&v=14"
+                <img
+                  src="/assets/images/maye.jpg"
+                  alt="Foto de Maye — Las Letras de MaJu"
                   style={{
                     width: '100%',
                     height: '490px',
-                    border: 'none',
+                    objectFit: 'cover',
                     display: 'block',
                   }}
-                  scrolling="no"
-                  allowTransparency
-                  allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share"
-                  title="Foto de Maye — Las Letras de MaJu"
                 />
               </div>
             </div>
